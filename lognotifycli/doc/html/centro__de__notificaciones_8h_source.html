@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Lognotify: Fichero Fuente centro_de_notificaciones.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Lognotify
+   </div>
+   <div id="projectbrief">Sistema de monitorización de ficheros de registro con notificaciones de escritorio</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('centro__de__notificaciones_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">centro_de_notificaciones.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">* Lognotify - Monitorización de ficheros de registro en GNU/Linux con notificaciones de escritorio</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">* Autor: Guillermo Fariña Arroyo</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">* C++11 (ISO/IEC 14882:2011)</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef _centro_de_notificaciones_h_</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define _centro_de_notificaciones_h_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;libnotify/notify.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;libnotify/notification.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;glib.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;evento.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;historial.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;filtro.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacelognotify.html">lognotify</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classlognotify_1_1_centro_de_notificaciones.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlognotify_1_1_centro_de_notificaciones.html">CentroDeNotificaciones</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//Constantes públicas</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classlognotify_1_1_centro_de_notificaciones.html#ad186125a7c68107f55ccf0070c297766">   34</a></span>&#160;    constexpr <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#ad186125a7c68107f55ccf0070c297766">TIEMPO_VISIBLE_POR_DEFECTO</a> = NOTIFY_EXPIRES_DEFAULT;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classlognotify_1_1_centro_de_notificaciones.html#a4fb1627992073ec5ff55b1a962bc8998">   36</a></span>&#160;    constexpr <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#a4fb1627992073ec5ff55b1a962bc8998">TIEMPO_VISIBLE_ILIMITADO</a> = NOTIFY_EXPIRES_NEVER;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">//constexpr static char RUTA_ICONO_POR_DEFECTO []= &quot;&quot;;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classlognotify_1_1_centro_de_notificaciones.html#aeaf0e848c771b356101419b9a79de664">   40</a></span>&#160;<span class="comment"></span>    constexpr <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#aeaf0e848c771b356101419b9a79de664">MOSTRAR_RUTA_COMPLETA_POR_DEFECTO</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    constexpr <span class="keyword">static</span> <span class="keywordtype">bool</span> ANADIR_REMITENTE_POR_DEFECTO = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//Funciones</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#ab44368c0705edc66b71797728e6a946e">CentroDeNotificaciones</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#a5aa2c3268f0cb2de2bfa048a88466ff5">inicializar</a> (<span class="keyword">const</span> std::string&amp; nombreDeAplicacion, <span class="keyword">const</span> std::string&amp; rutaFicheroReglas);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classlognotify_1_1_centro_de_notificaciones.html#a886c6c85ffb601e3eb9270f459c10523">   66</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#a886c6c85ffb601e3eb9270f459c10523">estaInicializado</a> (<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#aded5e92c87b5212b206dfbe78302d68d">inicializado_</a>; }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#a3ee2c6f9e367dd124591717df7cdffea">notificar</a> (<a class="code" href="classlognotify_1_1_evento.html">Evento</a>&amp; evento);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#a24656f59a63573c53bb2626fae182dfc">establecer_tiempo_visible</a> (<span class="keyword">const</span> <span class="keywordtype">int</span> milisegundos);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#ac3e49fff3175f22d10b11dda6869207b">establecer_icono_aplicacion</a> (<span class="keyword">const</span> std::string&amp; ruta);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#ae4787e700184235587464c9f5e3ee696">establecer_mostrar_ruta_completa</a> (<span class="keyword">const</span> <span class="keywordtype">bool</span> activado);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#aa4d9c71ffb533bbae808d088d44280a1">establecer_anadir_remitente</a> (<span class="keyword">const</span> <span class="keywordtype">bool</span> activado);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#af209a0df4015d8630190d4867a0bb56d">establecer_historial_de_sesion</a> (<span class="keyword">const</span> std::string&amp; ruta);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#a186eae61ef3001e4762014507204c331">establecer_numero_de_historiales_antiguos</a> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numeroDeHistoriales);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#ada8fa84cb99c5f01f166de87aff4e93e">mostrarNotificacionDeEscritorio</a> (  <span class="keyword">const</span> std::string&amp; cabecera,</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                                            <span class="keyword">const</span> std::string&amp; cuerpo,</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                                            <span class="keyword">const</span> std::string&amp; icono    );</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="comment">//Variables miembro</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classlognotify_1_1_centro_de_notificaciones.html#aded5e92c87b5212b206dfbe78302d68d">  134</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#aded5e92c87b5212b206dfbe78302d68d">inicializado_</a>;                 </div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classlognotify_1_1_centro_de_notificaciones.html#a4507ae94da1b38d3837758b57388ea30">  135</a></span>&#160;    <a class="code" href="classlognotify_1_1_historial.html">Historial</a> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#a4507ae94da1b38d3837758b57388ea30">historial_de_sesion_</a>;     </div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="classlognotify_1_1_centro_de_notificaciones.html#abba5d9fedeec7dcea59be738872428db">  136</a></span>&#160;    <a class="code" href="classlognotify_1_1_filtro.html">Filtro</a> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#abba5d9fedeec7dcea59be738872428db">filtro_</a>;                     </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classlognotify_1_1_centro_de_notificaciones.html#ad7cf99420fec475852ea82da67321e02">  137</a></span>&#160;    std::mutex <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#ad7cf99420fec475852ea82da67321e02">mutex_notificacion_</a>;     </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classlognotify_1_1_centro_de_notificaciones.html#a032ece45d4411bb4ab7bbd26f3acc3d5">  138</a></span>&#160;    std::mutex <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#a032ece45d4411bb4ab7bbd26f3acc3d5">mutex_historial_</a>;        </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classlognotify_1_1_centro_de_notificaciones.html#a3ce8dd94f3bcc42804be999d086b8d9b">  139</a></span>&#160;    std::string <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#a3ce8dd94f3bcc42804be999d086b8d9b">ruta_icono_aplicacion_</a>; </div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classlognotify_1_1_centro_de_notificaciones.html#a3fd6ae0f2a9b95cb19556f0d6d809a91">  140</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#a3fd6ae0f2a9b95cb19556f0d6d809a91">tiempo_visible_</a>;                </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classlognotify_1_1_centro_de_notificaciones.html#a2c9428cb1a8415fa4842b2d7b55c9444">  141</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#a2c9428cb1a8415fa4842b2d7b55c9444">mostrar_ruta_completa_</a>;        </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classlognotify_1_1_centro_de_notificaciones.html#a7a589f2186499e2101f30987aedd8d31">  142</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classlognotify_1_1_centro_de_notificaciones.html#a7a589f2186499e2101f30987aedd8d31">anadir_remitente_</a>;             </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;};</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;} <span class="comment">//namespace lognotify</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#endif //_centro_de_notificaciones_h_</span></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_a886c6c85ffb601e3eb9270f459c10523"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#a886c6c85ffb601e3eb9270f459c10523">lognotify::CentroDeNotificaciones::estaInicializado</a></div><div class="ttdeci">bool estaInicializado(void)</div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.h:66</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_af209a0df4015d8630190d4867a0bb56d"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#af209a0df4015d8630190d4867a0bb56d">lognotify::CentroDeNotificaciones::establecer_historial_de_sesion</a></div><div class="ttdeci">bool establecer_historial_de_sesion(const std::string &amp;ruta)</div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.cpp:91</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_ab44368c0705edc66b71797728e6a946e"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#ab44368c0705edc66b71797728e6a946e">lognotify::CentroDeNotificaciones::CentroDeNotificaciones</a></div><div class="ttdeci">CentroDeNotificaciones(void)</div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.cpp:23</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_a2c9428cb1a8415fa4842b2d7b55c9444"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#a2c9428cb1a8415fa4842b2d7b55c9444">lognotify::CentroDeNotificaciones::mostrar_ruta_completa_</a></div><div class="ttdeci">bool mostrar_ruta_completa_</div><div class="ttdoc">Mostrar ruta de fichero completa en las notificaciones (sí o no) </div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.h:141</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_aa4d9c71ffb533bbae808d088d44280a1"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#aa4d9c71ffb533bbae808d088d44280a1">lognotify::CentroDeNotificaciones::establecer_anadir_remitente</a></div><div class="ttdeci">void establecer_anadir_remitente(const bool activado)</div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.cpp:86</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_a032ece45d4411bb4ab7bbd26f3acc3d5"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#a032ece45d4411bb4ab7bbd26f3acc3d5">lognotify::CentroDeNotificaciones::mutex_historial_</a></div><div class="ttdeci">std::mutex mutex_historial_</div><div class="ttdoc">Mutex para sincronizar los accesos al historial de sesión. </div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.h:138</div></div>
+<div class="ttc" id="classlognotify_1_1_filtro_html"><div class="ttname"><a href="classlognotify_1_1_filtro.html">lognotify::Filtro</a></div><div class="ttdef"><b>Definition:</b> filtro.h:26</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_a3fd6ae0f2a9b95cb19556f0d6d809a91"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#a3fd6ae0f2a9b95cb19556f0d6d809a91">lognotify::CentroDeNotificaciones::tiempo_visible_</a></div><div class="ttdeci">int tiempo_visible_</div><div class="ttdoc">Tiempo que las notificaciones permanecen en pantalla. </div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.h:140</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_ad186125a7c68107f55ccf0070c297766"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#ad186125a7c68107f55ccf0070c297766">lognotify::CentroDeNotificaciones::TIEMPO_VISIBLE_POR_DEFECTO</a></div><div class="ttdeci">static constexpr int TIEMPO_VISIBLE_POR_DEFECTO</div><div class="ttdoc">Tiempo visible en pantalla para notificaciones: por defecto. </div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.h:34</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_ada8fa84cb99c5f01f166de87aff4e93e"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#ada8fa84cb99c5f01f166de87aff4e93e">lognotify::CentroDeNotificaciones::mostrarNotificacionDeEscritorio</a></div><div class="ttdeci">bool mostrarNotificacionDeEscritorio(const std::string &amp;cabecera, const std::string &amp;cuerpo, const std::string &amp;icono)</div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.cpp:102</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_a3ce8dd94f3bcc42804be999d086b8d9b"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#a3ce8dd94f3bcc42804be999d086b8d9b">lognotify::CentroDeNotificaciones::ruta_icono_aplicacion_</a></div><div class="ttdeci">std::string ruta_icono_aplicacion_</div><div class="ttdoc">Ruta del icono por defecto para todas las notificaciones. </div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.h:139</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_a186eae61ef3001e4762014507204c331"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#a186eae61ef3001e4762014507204c331">lognotify::CentroDeNotificaciones::establecer_numero_de_historiales_antiguos</a></div><div class="ttdeci">void establecer_numero_de_historiales_antiguos(unsigned int numeroDeHistoriales)</div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.cpp:97</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html">lognotify::CentroDeNotificaciones</a></div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.h:29</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_a7a589f2186499e2101f30987aedd8d31"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#a7a589f2186499e2101f30987aedd8d31">lognotify::CentroDeNotificaciones::anadir_remitente_</a></div><div class="ttdeci">bool anadir_remitente_</div><div class="ttdoc">Añadir servidor remitente de la notificación (sí o no) </div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.h:142</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_a4507ae94da1b38d3837758b57388ea30"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#a4507ae94da1b38d3837758b57388ea30">lognotify::CentroDeNotificaciones::historial_de_sesion_</a></div><div class="ttdeci">Historial historial_de_sesion_</div><div class="ttdoc">Historial de eventos de la sesión. </div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.h:135</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_abba5d9fedeec7dcea59be738872428db"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#abba5d9fedeec7dcea59be738872428db">lognotify::CentroDeNotificaciones::filtro_</a></div><div class="ttdeci">Filtro filtro_</div><div class="ttdoc">Filtro de notificaciones. </div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.h:136</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_ac3e49fff3175f22d10b11dda6869207b"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#ac3e49fff3175f22d10b11dda6869207b">lognotify::CentroDeNotificaciones::establecer_icono_aplicacion</a></div><div class="ttdeci">void establecer_icono_aplicacion(const std::string &amp;ruta)</div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.cpp:76</div></div>
+<div class="ttc" id="classlognotify_1_1_evento_html"><div class="ttname"><a href="classlognotify_1_1_evento.html">lognotify::Evento</a></div><div class="ttdef"><b>Definition:</b> evento.h:20</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_ae4787e700184235587464c9f5e3ee696"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#ae4787e700184235587464c9f5e3ee696">lognotify::CentroDeNotificaciones::establecer_mostrar_ruta_completa</a></div><div class="ttdeci">void establecer_mostrar_ruta_completa(const bool activado)</div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.cpp:81</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_a4fb1627992073ec5ff55b1a962bc8998"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#a4fb1627992073ec5ff55b1a962bc8998">lognotify::CentroDeNotificaciones::TIEMPO_VISIBLE_ILIMITADO</a></div><div class="ttdeci">static constexpr int TIEMPO_VISIBLE_ILIMITADO</div><div class="ttdoc">Tiempo visible en pantalla para notificaciones: ilimitado (no expiran por sí mismas) ...</div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.h:36</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_a24656f59a63573c53bb2626fae182dfc"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#a24656f59a63573c53bb2626fae182dfc">lognotify::CentroDeNotificaciones::establecer_tiempo_visible</a></div><div class="ttdeci">void establecer_tiempo_visible(const int milisegundos)</div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.cpp:71</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_a3ee2c6f9e367dd124591717df7cdffea"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#a3ee2c6f9e367dd124591717df7cdffea">lognotify::CentroDeNotificaciones::notificar</a></div><div class="ttdeci">void notificar(Evento &amp;evento)</div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.cpp:39</div></div>
+<div class="ttc" id="namespacelognotify_html"><div class="ttname"><a href="namespacelognotify.html">lognotify</a></div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.cpp:20</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_aeaf0e848c771b356101419b9a79de664"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#aeaf0e848c771b356101419b9a79de664">lognotify::CentroDeNotificaciones::MOSTRAR_RUTA_COMPLETA_POR_DEFECTO</a></div><div class="ttdeci">static constexpr bool MOSTRAR_RUTA_COMPLETA_POR_DEFECTO</div><div class="ttdoc">< Valor por defecto de la ruta para el icono de aplicación en los mensajes </div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.h:40</div></div>
+<div class="ttc" id="classlognotify_1_1_historial_html"><div class="ttname"><a href="classlognotify_1_1_historial.html">lognotify::Historial</a></div><div class="ttdef"><b>Definition:</b> historial.h:21</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_ad7cf99420fec475852ea82da67321e02"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#ad7cf99420fec475852ea82da67321e02">lognotify::CentroDeNotificaciones::mutex_notificacion_</a></div><div class="ttdeci">std::mutex mutex_notificacion_</div><div class="ttdoc">Mutex para sincronizar los accesos a libnotify. </div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.h:137</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_aded5e92c87b5212b206dfbe78302d68d"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#aded5e92c87b5212b206dfbe78302d68d">lognotify::CentroDeNotificaciones::inicializado_</a></div><div class="ttdeci">bool inicializado_</div><div class="ttdoc">Indica si ya ha sido inicializado correctamente. </div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.h:134</div></div>
+<div class="ttc" id="classlognotify_1_1_centro_de_notificaciones_html_a5aa2c3268f0cb2de2bfa048a88466ff5"><div class="ttname"><a href="classlognotify_1_1_centro_de_notificaciones.html#a5aa2c3268f0cb2de2bfa048a88466ff5">lognotify::CentroDeNotificaciones::inicializar</a></div><div class="ttdeci">bool inicializar(const std::string &amp;nombreDeAplicacion, const std::string &amp;rutaFicheroReglas)</div><div class="ttdef"><b>Definition:</b> centro_de_notificaciones.cpp:31</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_2e0a26a2c9a4ed337af3b4c00bb0294b.html">lognotify_client</a></li><li class="navelem"><a class="el" href="dir_3fa9dc6f4c3fcf86dd3d1d46326b1d54.html">src</a></li><li class="navelem"><b>centro_de_notificaciones.h</b></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Lognotify: Fichero Fuente servidor_de_notificaciones.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Lognotify
+   </div>
+   <div id="projectbrief">Sistema de monitorización de ficheros de registro con notificaciones de escritorio</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('servidor__de__notificaciones_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">servidor_de_notificaciones.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">* Lognotify - Monitorización de ficheros de registro en GNU/Linux con notificaciones de escritorio</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">* Autor: Guillermo Fariña Arroyo</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">* C++11 (ISO/IEC 14882:2011)</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef _servidor_de_notificaciones_h_</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define _servidor_de_notificaciones_h_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;monitor_de_ficheros.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;tabla_de_clientes.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;servidor_de_conexion.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;evento.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;mensaje.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacelognotify.html">lognotify</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classlognotify_1_1_servidor_de_notificaciones.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlognotify_1_1_servidor_de_notificaciones.html">ServidorDeNotificaciones</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classlognotify_1_1_servidor_de_notificaciones.html#ace11d3a0a9f6f46ac4b74bef3001a7bd">   36</a></span>&#160;    <a class="code" href="classlognotify_1_1_servidor_de_notificaciones.html#ace11d3a0a9f6f46ac4b74bef3001a7bd">ServidorDeNotificaciones</a> (<span class="keywordtype">void</span>): <a class="code" href="classlognotify_1_1_servidor_de_notificaciones.html#a72ad7d2b6ece4a22868f71386292e2b5">esta_inicializado_</a> (false) {}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classlognotify_1_1_servidor_de_notificaciones.html#a9167715633144f078a70e1ef396a7a70">inicializar</a> (  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> puerto,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                        <span class="keyword">const</span> std::string&amp; dirRegistro,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                        <span class="keyword">const</span> std::vector&lt;std::string&gt; ficheros );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classlognotify_1_1_servidor_de_notificaciones.html#a4ab4a82c293312b18d1f774abd0b8149">   53</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classlognotify_1_1_servidor_de_notificaciones.html#a4ab4a82c293312b18d1f774abd0b8149">esta_inicializado</a> (<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> <a class="code" href="classlognotify_1_1_servidor_de_notificaciones.html#a72ad7d2b6ece4a22868f71386292e2b5">esta_inicializado_</a>; }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlognotify_1_1_servidor_de_notificaciones.html#a7f0e2253055a0741efe51c88cf84570b">darServicio</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classlognotify_1_1_mensaje.html">Mensaje</a> <a class="code" href="classlognotify_1_1_servidor_de_notificaciones.html#a09e97c5c623fa9c054f1c4a41a28966c">serializarEvento</a> (std::unique_ptr&lt;Evento&gt; evento);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">//Variables miembro</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classlognotify_1_1_servidor_de_notificaciones.html#a72ad7d2b6ece4a22868f71386292e2b5">   70</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classlognotify_1_1_servidor_de_notificaciones.html#a72ad7d2b6ece4a22868f71386292e2b5">esta_inicializado_</a>;                        </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classlognotify_1_1_servidor_de_notificaciones.html#a7fd5cce0986c8650c4cad02a7c98d84e">   71</a></span>&#160;    <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html">MonitorDeFicheros</a> <a class="code" href="classlognotify_1_1_servidor_de_notificaciones.html#a7fd5cce0986c8650c4cad02a7c98d84e">proveedor_de_eventos_</a>;        </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classlognotify_1_1_servidor_de_notificaciones.html#a3685e5d1557d72f6566ab6bdc100014e">   72</a></span>&#160;    <a class="code" href="classlognotify_1_1_servidor_de_conexion.html">ServidorDeConexion</a> <a class="code" href="classlognotify_1_1_servidor_de_notificaciones.html#a3685e5d1557d72f6566ab6bdc100014e">proveedor_de_clientes_</a>;      </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classlognotify_1_1_servidor_de_notificaciones.html#ab541e0cedbe4d933774e9e97e9ec3d6e">   73</a></span>&#160;    std::shared_ptr&lt;TablaDeClientes&gt; <a class="code" href="classlognotify_1_1_servidor_de_notificaciones.html#ab541e0cedbe4d933774e9e97e9ec3d6e">destinatarios_</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;} <span class="comment">//namespace lognotify</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif //_servidor_de_notificaciones_h_</span></div>
+<div class="ttc" id="classlognotify_1_1_servidor_de_conexion_html"><div class="ttname"><a href="classlognotify_1_1_servidor_de_conexion.html">lognotify::ServidorDeConexion</a></div><div class="ttdef"><b>Definition:</b> servidor_de_conexion.h:23</div></div>
+<div class="ttc" id="classlognotify_1_1_servidor_de_notificaciones_html_a7f0e2253055a0741efe51c88cf84570b"><div class="ttname"><a href="classlognotify_1_1_servidor_de_notificaciones.html#a7f0e2253055a0741efe51c88cf84570b">lognotify::ServidorDeNotificaciones::darServicio</a></div><div class="ttdeci">void darServicio(void)</div><div class="ttdef"><b>Definition:</b> servidor_de_notificaciones.cpp:54</div></div>
+<div class="ttc" id="classlognotify_1_1_servidor_de_notificaciones_html_a3685e5d1557d72f6566ab6bdc100014e"><div class="ttname"><a href="classlognotify_1_1_servidor_de_notificaciones.html#a3685e5d1557d72f6566ab6bdc100014e">lognotify::ServidorDeNotificaciones::proveedor_de_clientes_</a></div><div class="ttdeci">ServidorDeConexion proveedor_de_clientes_</div><div class="ttdoc">Servidor de conexión que acepta nuevos clientes. </div><div class="ttdef"><b>Definition:</b> servidor_de_notificaciones.h:72</div></div>
+<div class="ttc" id="classlognotify_1_1_servidor_de_notificaciones_html_a72ad7d2b6ece4a22868f71386292e2b5"><div class="ttname"><a href="classlognotify_1_1_servidor_de_notificaciones.html#a72ad7d2b6ece4a22868f71386292e2b5">lognotify::ServidorDeNotificaciones::esta_inicializado_</a></div><div class="ttdeci">bool esta_inicializado_</div><div class="ttdoc">Indica si el servidor ha sido ya inicializado. </div><div class="ttdef"><b>Definition:</b> servidor_de_notificaciones.h:70</div></div>
+<div class="ttc" id="classlognotify_1_1_servidor_de_notificaciones_html"><div class="ttname"><a href="classlognotify_1_1_servidor_de_notificaciones.html">lognotify::ServidorDeNotificaciones</a></div><div class="ttdef"><b>Definition:</b> servidor_de_notificaciones.h:29</div></div>
+<div class="ttc" id="classlognotify_1_1_servidor_de_notificaciones_html_a4ab4a82c293312b18d1f774abd0b8149"><div class="ttname"><a href="classlognotify_1_1_servidor_de_notificaciones.html#a4ab4a82c293312b18d1f774abd0b8149">lognotify::ServidorDeNotificaciones::esta_inicializado</a></div><div class="ttdeci">bool esta_inicializado(void)</div><div class="ttdef"><b>Definition:</b> servidor_de_notificaciones.h:53</div></div>
+<div class="ttc" id="classlognotify_1_1_servidor_de_notificaciones_html_ab541e0cedbe4d933774e9e97e9ec3d6e"><div class="ttname"><a href="classlognotify_1_1_servidor_de_notificaciones.html#ab541e0cedbe4d933774e9e97e9ec3d6e">lognotify::ServidorDeNotificaciones::destinatarios_</a></div><div class="ttdeci">std::shared_ptr&lt; TablaDeClientes &gt; destinatarios_</div><div class="ttdoc">Clientes a los que notificar los eventos generados. </div><div class="ttdef"><b>Definition:</b> servidor_de_notificaciones.h:73</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html">lognotify::MonitorDeFicheros</a></div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.h:26</div></div>
+<div class="ttc" id="classlognotify_1_1_servidor_de_notificaciones_html_a7fd5cce0986c8650c4cad02a7c98d84e"><div class="ttname"><a href="classlognotify_1_1_servidor_de_notificaciones.html#a7fd5cce0986c8650c4cad02a7c98d84e">lognotify::ServidorDeNotificaciones::proveedor_de_eventos_</a></div><div class="ttdeci">MonitorDeFicheros proveedor_de_eventos_</div><div class="ttdoc">Monitor de ficheros que genera eventos de modificación. </div><div class="ttdef"><b>Definition:</b> servidor_de_notificaciones.h:71</div></div>
+<div class="ttc" id="classlognotify_1_1_servidor_de_notificaciones_html_a09e97c5c623fa9c054f1c4a41a28966c"><div class="ttname"><a href="classlognotify_1_1_servidor_de_notificaciones.html#a09e97c5c623fa9c054f1c4a41a28966c">lognotify::ServidorDeNotificaciones::serializarEvento</a></div><div class="ttdeci">Mensaje serializarEvento(std::unique_ptr&lt; Evento &gt; evento)</div><div class="ttdef"><b>Definition:</b> servidor_de_notificaciones.cpp:75</div></div>
+<div class="ttc" id="classlognotify_1_1_servidor_de_notificaciones_html_ace11d3a0a9f6f46ac4b74bef3001a7bd"><div class="ttname"><a href="classlognotify_1_1_servidor_de_notificaciones.html#ace11d3a0a9f6f46ac4b74bef3001a7bd">lognotify::ServidorDeNotificaciones::ServidorDeNotificaciones</a></div><div class="ttdeci">ServidorDeNotificaciones(void)</div><div class="ttdef"><b>Definition:</b> servidor_de_notificaciones.h:36</div></div>
+<div class="ttc" id="classlognotify_1_1_servidor_de_notificaciones_html_a9167715633144f078a70e1ef396a7a70"><div class="ttname"><a href="classlognotify_1_1_servidor_de_notificaciones.html#a9167715633144f078a70e1ef396a7a70">lognotify::ServidorDeNotificaciones::inicializar</a></div><div class="ttdeci">bool inicializar(const unsigned short puerto, const std::string &amp;dirRegistro, const std::vector&lt; std::string &gt; ficheros)</div><div class="ttdef"><b>Definition:</b> servidor_de_notificaciones.cpp:22</div></div>
+<div class="ttc" id="classlognotify_1_1_mensaje_html"><div class="ttname"><a href="classlognotify_1_1_mensaje.html">lognotify::Mensaje</a></div><div class="ttdef"><b>Definition:</b> mensaje.h:19</div></div>
+<div class="ttc" id="namespacelognotify_html"><div class="ttname"><a href="namespacelognotify.html">lognotify</a></div><div class="ttdef"><b>Definition:</b> cliente.cpp:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_f1756cbb5562a7d1a3ed6da957f9d748.html">lognotify_server</a></li><li class="navelem"><a class="el" href="dir_d91a18190ac7a0f44dbb1e84f2b90dd9.html">src</a></li><li class="navelem"><b>servidor_de_notificaciones.h</b></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

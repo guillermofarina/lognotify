@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Lognotify: Fichero Fuente monitor_de_ficheros.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Lognotify
+   </div>
+   <div id="projectbrief">Sistema de monitorización de ficheros de registro con notificaciones de escritorio</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('monitor__de__ficheros_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">monitor_de_ficheros.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">* Lognotify - Monitorización de ficheros de registro en GNU/Linux con notificaciones de escritorio</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">* Autor: Guillermo Fariña Arroyo</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">* C++11 (ISO/IEC 14882:2011)</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef _monitor_de_ficheros_h_</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define _monitor_de_ficheros_h_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;fichero.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;evento.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacelognotify.html">lognotify</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classlognotify_1_1_monitor_de_ficheros.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlognotify_1_1_monitor_de_ficheros.html">MonitorDeFicheros</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#a83d171671a024d1c83e90e33bc5a2b28">MonitorDeFicheros</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#ae5b20da04e486580dad02a68b1a528d4">~MonitorDeFicheros</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#a9fc0b5a57356fb13961a829e8c5b4713">inicializar</a> (<span class="keyword">const</span> std::string&amp; dirRegistro);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classlognotify_1_1_monitor_de_ficheros.html#a8cf3d8763ff1dbfc0b87038be7d6a412">   53</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#a8cf3d8763ff1dbfc0b87038be7d6a412">estaInicializado</a> (<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#a087fd988f42e336a24c7e4f24b72a8a8">descriptor_inotify_</a> &lt; 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#a985b87984f94a639346338d32a197a33">anadirFichero</a> (<span class="keyword">const</span> std::string&amp; ruta);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#ac9919be8ceed3960dfdbfb005e269c9f">eliminarFichero</a> (<span class="keyword">const</span> std::string&amp; ruta);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#ae2710db56b856c63375fa7f17109b5cd">eliminarTodo</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#aef3d48f63c14182ab6e8d1c3d30664cc">obtenerNumeroDeFicheros</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::unique_ptr&lt;Evento&gt; <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#afc1c268f5355c49c95b5324b9468d399">obtenerSiguienteEvento</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#afd601f508d2681f505a12456395cefd5">iniciarRotacionFichero</a> (std::unique_ptr&lt;Fichero&gt; fichero);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#a15ff78980a6566ed0521b60069c2bb7c">finalizarRotacionFichero</a> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> indice, <span class="keyword">const</span> std::string&amp; nombre);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#ac9919be8ceed3960dfdbfb005e269c9f">eliminarFichero</a> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> indice);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    std::string <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#a334c0e1ba24e0e6cd3b92e233e17ebe9">normalizarRuta</a> (<span class="keyword">const</span> std::string&amp; ruta);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    std::string <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#a334c0e1ba24e0e6cd3b92e233e17ebe9">normalizarRuta</a> (<span class="keyword">const</span> std::string&amp; ruta, <span class="keyword">const</span> std::string&amp; rutaRaiz);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">//Constantes</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classlognotify_1_1_monitor_de_ficheros.html#a26b5f1aab84d61dcd8e6c0f14d1aca3b">  137</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#a26b5f1aab84d61dcd8e6c0f14d1aca3b">LON_BUF_INOT_</a> = 10;   </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">//Variables miembro</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classlognotify_1_1_monitor_de_ficheros.html#a087fd988f42e336a24c7e4f24b72a8a8">  140</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#a087fd988f42e336a24c7e4f24b72a8a8">descriptor_inotify_</a>;                </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classlognotify_1_1_monitor_de_ficheros.html#a0c4c8c9458c6603148e3a3677ed0c578">  141</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#a0c4c8c9458c6603148e3a3677ed0c578">buffer_inotify_</a>;                  </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classlognotify_1_1_monitor_de_ficheros.html#a2bd0576da71791462634c571156b7e35">  142</a></span>&#160;    ssize_t <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#a2bd0576da71791462634c571156b7e35">ocupado_buffer_inotify_</a>;        </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classlognotify_1_1_monitor_de_ficheros.html#af719531832cda916a3238c0e3dfed202">  143</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#af719531832cda916a3238c0e3dfed202">puntero_buffer_inotify_</a>;   </div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="classlognotify_1_1_monitor_de_ficheros.html#aa6e7e5df834d9601f9990af1ec239f95">  144</a></span>&#160;    std::string <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#aa6e7e5df834d9601f9990af1ec239f95">directorio_registro_</a>;       </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classlognotify_1_1_monitor_de_ficheros.html#a4441a515b397d810c7033aaa2d5e2864">  145</a></span>&#160;    std::vector&lt;std::unique_ptr&lt;Fichero&gt;&gt; <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#a4441a515b397d810c7033aaa2d5e2864">ficheros_vigilados_</a>;      </div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classlognotify_1_1_monitor_de_ficheros.html#a2618cf06c578fb4a0d7643af4bdebd4a">  146</a></span>&#160;    std::vector&lt;std::list&lt;std::unique_ptr&lt;Fichero&gt;&gt;&gt; <a class="code" href="classlognotify_1_1_monitor_de_ficheros.html#a2618cf06c578fb4a0d7643af4bdebd4a">ficheros_en_rotacion_</a>; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;};</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;} <span class="comment">//namespace lognotify</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">#endif //_monitor_de_ficheros_h_</span></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_ae2710db56b856c63375fa7f17109b5cd"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#ae2710db56b856c63375fa7f17109b5cd">lognotify::MonitorDeFicheros::eliminarTodo</a></div><div class="ttdeci">void eliminarTodo(void)</div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.cpp:144</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_a8cf3d8763ff1dbfc0b87038be7d6a412"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#a8cf3d8763ff1dbfc0b87038be7d6a412">lognotify::MonitorDeFicheros::estaInicializado</a></div><div class="ttdeci">bool estaInicializado(void)</div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.h:53</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_a9fc0b5a57356fb13961a829e8c5b4713"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#a9fc0b5a57356fb13961a829e8c5b4713">lognotify::MonitorDeFicheros::inicializar</a></div><div class="ttdeci">bool inicializar(const std::string &amp;dirRegistro)</div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.cpp:38</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_aef3d48f63c14182ab6e8d1c3d30664cc"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#aef3d48f63c14182ab6e8d1c3d30664cc">lognotify::MonitorDeFicheros::obtenerNumeroDeFicheros</a></div><div class="ttdeci">int obtenerNumeroDeFicheros(void)</div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.cpp:150</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_a83d171671a024d1c83e90e33bc5a2b28"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#a83d171671a024d1c83e90e33bc5a2b28">lognotify::MonitorDeFicheros::MonitorDeFicheros</a></div><div class="ttdeci">MonitorDeFicheros(void)</div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.cpp:26</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_af719531832cda916a3238c0e3dfed202"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#af719531832cda916a3238c0e3dfed202">lognotify::MonitorDeFicheros::puntero_buffer_inotify_</a></div><div class="ttdeci">unsigned int puntero_buffer_inotify_</div><div class="ttdoc">Referencia al siguiente byte del buffer_inotify_ por procesar. </div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.h:143</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_afd601f508d2681f505a12456395cefd5"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#afd601f508d2681f505a12456395cefd5">lognotify::MonitorDeFicheros::iniciarRotacionFichero</a></div><div class="ttdeci">void iniciarRotacionFichero(std::unique_ptr&lt; Fichero &gt; fichero)</div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.cpp:220</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_a985b87984f94a639346338d32a197a33"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#a985b87984f94a639346338d32a197a33">lognotify::MonitorDeFicheros::anadirFichero</a></div><div class="ttdeci">bool anadirFichero(const std::string &amp;ruta)</div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.cpp:79</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_aa6e7e5df834d9601f9990af1ec239f95"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#aa6e7e5df834d9601f9990af1ec239f95">lognotify::MonitorDeFicheros::directorio_registro_</a></div><div class="ttdeci">std::string directorio_registro_</div><div class="ttdoc">Ruta absoluta del directorio de ficheros de registro del sistema. </div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.h:144</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_ae5b20da04e486580dad02a68b1a528d4"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#ae5b20da04e486580dad02a68b1a528d4">lognotify::MonitorDeFicheros::~MonitorDeFicheros</a></div><div class="ttdeci">~MonitorDeFicheros(void)</div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.cpp:32</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_a2bd0576da71791462634c571156b7e35"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#a2bd0576da71791462634c571156b7e35">lognotify::MonitorDeFicheros::ocupado_buffer_inotify_</a></div><div class="ttdeci">ssize_t ocupado_buffer_inotify_</div><div class="ttdoc">Número de bytes de datos válidos contenidos en buffer_inotify_. </div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.h:142</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html">lognotify::MonitorDeFicheros</a></div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.h:26</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_a2618cf06c578fb4a0d7643af4bdebd4a"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#a2618cf06c578fb4a0d7643af4bdebd4a">lognotify::MonitorDeFicheros::ficheros_en_rotacion_</a></div><div class="ttdeci">std::vector&lt; std::list&lt; std::unique_ptr&lt; Fichero &gt; &gt; &gt; ficheros_en_rotacion_</div><div class="ttdoc">organizados en 2 niveles (una lista de ficheros por cada ubicación diferente) </div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.h:146</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_afc1c268f5355c49c95b5324b9468d399"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#afc1c268f5355c49c95b5324b9468d399">lognotify::MonitorDeFicheros::obtenerSiguienteEvento</a></div><div class="ttdeci">std::unique_ptr&lt; Evento &gt; obtenerSiguienteEvento(void)</div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.cpp:161</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_a4441a515b397d810c7033aaa2d5e2864"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#a4441a515b397d810c7033aaa2d5e2864">lognotify::MonitorDeFicheros::ficheros_vigilados_</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; Fichero &gt; &gt; ficheros_vigilados_</div><div class="ttdoc">Lista de ficheros vigilados con inotify. </div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.h:145</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_a15ff78980a6566ed0521b60069c2bb7c"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#a15ff78980a6566ed0521b60069c2bb7c">lognotify::MonitorDeFicheros::finalizarRotacionFichero</a></div><div class="ttdeci">void finalizarRotacionFichero(unsigned int indice, const std::string &amp;nombre)</div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.cpp:264</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_a087fd988f42e336a24c7e4f24b72a8a8"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#a087fd988f42e336a24c7e4f24b72a8a8">lognotify::MonitorDeFicheros::descriptor_inotify_</a></div><div class="ttdeci">int descriptor_inotify_</div><div class="ttdoc">Descriptor de la instancia de inotify. </div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.h:140</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_a334c0e1ba24e0e6cd3b92e233e17ebe9"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#a334c0e1ba24e0e6cd3b92e233e17ebe9">lognotify::MonitorDeFicheros::normalizarRuta</a></div><div class="ttdeci">std::string normalizarRuta(const std::string &amp;ruta)</div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.cpp:305</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_ac9919be8ceed3960dfdbfb005e269c9f"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#ac9919be8ceed3960dfdbfb005e269c9f">lognotify::MonitorDeFicheros::eliminarFichero</a></div><div class="ttdeci">void eliminarFichero(const std::string &amp;ruta)</div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.cpp:120</div></div>
+<div class="ttc" id="namespacelognotify_html"><div class="ttname"><a href="namespacelognotify.html">lognotify</a></div><div class="ttdef"><b>Definition:</b> cliente.cpp:21</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_a26b5f1aab84d61dcd8e6c0f14d1aca3b"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#a26b5f1aab84d61dcd8e6c0f14d1aca3b">lognotify::MonitorDeFicheros::LON_BUF_INOT_</a></div><div class="ttdeci">static constexpr unsigned int LON_BUF_INOT_</div><div class="ttdoc">Longitud del buffer de inotify en número de eventos. </div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.h:137</div></div>
+<div class="ttc" id="classlognotify_1_1_monitor_de_ficheros_html_a0c4c8c9458c6603148e3a3677ed0c578"><div class="ttname"><a href="classlognotify_1_1_monitor_de_ficheros.html#a0c4c8c9458c6603148e3a3677ed0c578">lognotify::MonitorDeFicheros::buffer_inotify_</a></div><div class="ttdeci">char * buffer_inotify_</div><div class="ttdoc">Buffer de lectura de eventos de inotify. </div><div class="ttdef"><b>Definition:</b> monitor_de_ficheros.h:141</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_f1756cbb5562a7d1a3ed6da957f9d748.html">lognotify_server</a></li><li class="navelem"><a class="el" href="dir_d91a18190ac7a0f44dbb1e84f2b90dd9.html">src</a></li><li class="navelem"><b>monitor_de_ficheros.h</b></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>
